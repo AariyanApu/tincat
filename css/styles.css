@@ -1,24 +1,36 @@
 html,
 body {
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* Reuseable Component */
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
-  font-size: 3.8rem;
-  line-height: 1.5;
 }
+
 h3 {
-  font-weight: 700;
   font-size: 1.5rem;
 }
 
-h2 {
-  font-weight: 700;
+/* Headings */
+
+.bigHeading {
+  font-size: 3.8rem;
+}
+
+.carouselHeading {
   font-size: 3rem;
-  line-height: 1.5;
+}
+
+.pricingHeading {
+  font-size: 3rem;
 }
 
 .container-fluid {
@@ -39,8 +51,6 @@ h2 {
   transform: rotate(25deg);
   position: absolute;
 }
-
-
 
 /* Navigation Bar */
 
@@ -66,7 +76,6 @@ h2 {
 .downloadButton {
   margin: 5% 3% 5% 0;
 }
-
 
 /* Features Sections */
 
@@ -126,6 +135,7 @@ h2 {
 #pricing p {
   padding-bottom: 25px;
 }
+
 /* CTA Section */
 
 #cta {
@@ -155,28 +165,91 @@ h2 {
 
 .footerLink {
   color: #000;
-
 }
 
 .footerLink:hover {
   color: #ff4c68;
-
 }
-
 
 /*--------------- Media Query ----------------  */
 
-
 @media (max-width: 1020px) {
-
-  .titleImage{
+  .titleImage {
     position: static;
-    transform:rotate(0);
+    transform: rotate(0);
   }
 
-  #title{
+  #title {
     text-align: center;
   }
-
 }
 
+@media (max-width: 480px) {
+  .titleImage {
+    width: 180px;
+    height: 300px;
+  }
+
+  #features {
+    font-size: 20%;
+  }
+
+  .bigHeading {
+    font-size: 2rem;
+  }
+  .carouselHeading {
+    font-size: 1rem;
+  }
+
+  .testimonial-images {
+    width: 30%;
+  }
+
+  .press-logo {
+    width: 12%;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+  .big-heading {
+    font-size: 1.5rem;
+  }
+  .pricingHeading {
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+  }
+
+  #pricing .card p {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .animatedIcon {
+    width: 20%;
+    padding: 20px 0px 2px 0px;
+  }
+  .featuresHeading {
+    font-size: 1rem;
+  }
+
+  #features p {
+    margin: 0;
+  }
+
+  .downloadButton {
+    margin: 2% 0% 2% 0%;
+  }
+  .btn-group-lg > .btn,
+  .btn-lg {
+    padding: 0 0.5rem;
+  }
+}
