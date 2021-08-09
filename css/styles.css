@@ -22,7 +22,7 @@ h2 {
 }
 
 .container-fluid {
-  padding: 3% 15%;
+  padding: 3% 15% 7% 15%;
 }
 
 /* Title Page */
@@ -31,6 +31,16 @@ h2 {
   background-color: #ff4c68;
   color: #fff;
 }
+
+/* title Image */
+.titleImage {
+  width: 350px;
+  height: 650px;
+  transform: rotate(25deg);
+  position: absolute;
+}
+
+
 
 /* Navigation Bar */
 
@@ -57,17 +67,14 @@ h2 {
   margin: 5% 3% 5% 0;
 }
 
-/* title Image */
-.titleImage {
-  width: 60%;
-  transform: rotate(25deg);
-}
 
-/* Features Icon */
+/* Features Sections */
 
 #features {
   text-align: center;
   padding: 7% 15%;
+  background-color: #fff;
+  position: relative;
 }
 
 .animatedIcon {
@@ -116,7 +123,7 @@ h2 {
   padding: 7% 15%;
 }
 
-#pricing p{
+#pricing p {
   padding-bottom: 25px;
 }
 /* CTA Section */
@@ -131,28 +138,45 @@ h2 {
   font-size: 3.5rem;
 }
 
-
 /* Footer Section */
 
 #footer {
   text-align: center;
   padding: 7% 15%;
-  
 }
 
-.footerUl{
-  list-style:none;
-  
+.footerUl {
+  list-style: none;
 }
-.footerLi{
-  display:inline-block;
-  margin:0px 10px;
+.footerLi {
+  display: inline-block;
+  margin: 0px 10px;
 }
 
-.footerLink{
+.footerLink {
   color: #000;
+
 }
 
-.footerLink:hover{
+.footerLink:hover {
   color: #ff4c68;
+
 }
+
+
+/*--------------- Media Query ----------------  */
+
+
+@media (max-width: 1020px) {
+
+  .titleImage{
+    position: static;
+    transform:rotate(0);
+  }
+
+  #title{
+    text-align: center;
+  }
+
+}
+
