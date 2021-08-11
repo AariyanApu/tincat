@@ -183,7 +183,7 @@ h3 {
 /*--------------- Media Query ----------------  */
 
 @media (max-width: 1020px) {
-  #title {
+  #title .container-fluid {
     text-align: center;
   }
 
@@ -199,6 +199,7 @@ h3 {
   p {
     font-size: 0.8rem;
   }
+
   .titleHeading {
     font-size: 2rem;
   }
