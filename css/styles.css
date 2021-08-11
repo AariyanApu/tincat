@@ -1,10 +1,17 @@
 html,
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Lato", sans-serif;
+
   scroll-behavior: smooth;
+  text-align: center;
 }
 
 /* Reuseable Component */
+
+.container-fluid {
+  padding: 7% 15%;
+  /* padding: 3% 15% 7% 15%; */
+}
 
 h1,
 h2,
@@ -21,27 +28,64 @@ h3 {
 
 /* Headings */
 
-.bigHeading {
+.titleHeading {
   font-size: 3.8rem;
 }
 
 .carouselHeading {
-  font-size: 3rem;
+  font-size: 2.9rem;
 }
 
 .pricingHeading {
   font-size: 3rem;
 }
 
-.container-fluid {
-  padding: 3% 15% 7% 15%;
-}
-
-/* Title Page */
-
-#title {
+/* Sections */
+.color-section {
   background-color: #ff4c68;
   color: #fff;
+}
+#testimonials.color-section,
+#press.color-section {
+  background-color: #ef8172;
+  color: #fff;
+}
+
+.white-section {
+  background-color: #fff;
+}
+
+/* Navigation Bar */
+
+.navbar-brand {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.navbar {
+  padding-bottom: 4.5rem;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+.nav-link {
+  font-size: 1.2rem;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #000;
+}
+
+/** Title Page */
+
+#title .container-fluid {
+  padding: 3% 15% 7% 15%;
+  text-align: left;
 }
 
 /* title Image */
@@ -52,26 +96,6 @@ h3 {
   position: absolute;
 }
 
-/* Navigation Bar */
-
-.navbar {
-  padding-bottom: 4.5rem;
-}
-
-.nav-item {
-  color: yellow;
-  padding: 0 18px;
-}
-.nav-link {
-  font-size: 1.2rem;
-}
-
-.navbar-brand {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
 /* Download Button */
 .downloadButton {
   margin: 5% 3% 5% 0;
@@ -80,14 +104,11 @@ h3 {
 /* Features Sections */
 
 #features {
-  text-align: center;
-  padding: 7% 15%;
-  background-color: #fff;
   position: relative;
 }
 
 .animatedIcon {
-  width: 80px;
+  width: 25%;
   padding-bottom: 20px;
 }
 
@@ -96,16 +117,6 @@ h3 {
 }
 
 /* Testimonial Section */
-
-#testimonials {
-  text-align: center;
-  background-color: #ef8172;
-  color: #fff;
-}
-
-.carousel-item {
-  padding: 7% 15%;
-}
 
 .testimonial-images {
   width: 10%;
@@ -116,8 +127,6 @@ h3 {
 /* Press Section */
 
 #press {
-  background-color: #ef8172;
-  text-align: center;
   padding-bottom: 3%;
 }
 
@@ -127,10 +136,6 @@ h3 {
 }
 
 /* Pricing Section */
-#pricing {
-  text-align: center;
-  padding: 7% 15%;
-}
 
 #pricing p {
   padding-bottom: 25px;
@@ -138,25 +143,19 @@ h3 {
 
 /* CTA Section */
 
-#cta {
-  background-color: #ff4c68;
-  text-align: center;
-  padding: 7% 15%;
-}
-
-.big-heading {
+.ctaHeading {
   font-size: 3.5rem;
 }
 
 /* Footer Section */
 
-#footer {
-  text-align: center;
-  padding: 7% 15%;
+#footer p {
+  margin-bottom: 0px;
 }
-
 .footerUl {
   list-style: none;
+
+  padding-left: 0;
 }
 .footerLi {
   display: inline-block;
@@ -171,34 +170,68 @@ h3 {
   color: #ff4c68;
 }
 
+.credit,
+.credit a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.credit a:hover {
+  color: #ff4c68;
+}
+
 /*--------------- Media Query ----------------  */
 
 @media (max-width: 1020px) {
+  #title {
+    text-align: center;
+  }
+
   .titleImage {
     position: static;
     transform: rotate(0);
   }
-
-  #title {
-    text-align: center;
-  }
 }
 
+/* ------ For Mobile Devices --------- */
+
 @media (max-width: 480px) {
+  p {
+    font-size: 0.8rem;
+  }
+  .titleHeading {
+    font-size: 2rem;
+  }
+
+  .downloadButton {
+    margin: 2% 0% 2% 0%;
+  }
+  .btn-group-lg > .btn,
+  .btn-lg {
+    padding: 0 0.5rem;
+  }
+
   .titleImage {
     width: 180px;
     height: 300px;
+    padding-top: 15px;
   }
 
-  #features {
-    font-size: 20%;
-  }
+  /* Features Section */
 
-  .bigHeading {
-    font-size: 2rem;
-  }
-  .carouselHeading {
+  .featuresHeading {
     font-size: 1rem;
+  }
+
+  #features p {
+    margin: 0;
+  }
+  .animatedIcon {
+    padding: 20px 0px 2px 0px;
+  }
+
+  .carouselHeading {
+    font-size: 1.2rem;
   }
 
   .testimonial-images {
@@ -209,22 +242,19 @@ h3 {
     width: 12%;
     margin-bottom: 5px;
   }
-  p {
-    font-size: 0.8rem;
-  }
 
-  .card-title {
+  /* Pricing Section */
+
+  .pricingHeading {
+    padding-bottom: 5px;
     font-size: 1.5rem;
   }
 
   h3 {
     font-size: 1.2rem;
   }
-  .big-heading {
-    font-size: 1.5rem;
-  }
-  .pricingHeading {
-    padding-bottom: 5px;
+
+  .card-title {
     font-size: 1.5rem;
   }
 
@@ -233,23 +263,7 @@ h3 {
     padding: 0px;
   }
 
-  .animatedIcon {
-    width: 20%;
-    padding: 20px 0px 2px 0px;
-  }
-  .featuresHeading {
-    font-size: 1rem;
-  }
-
-  #features p {
-    margin: 0;
-  }
-
-  .downloadButton {
-    margin: 2% 0% 2% 0%;
-  }
-  .btn-group-lg > .btn,
-  .btn-lg {
-    padding: 0 0.5rem;
+  .ctaHeading {
+    font-size: 1.5rem;
   }
 }
